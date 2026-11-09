@@ -1,0 +1,81 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch The Stars</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <!-- Welcome Screen -->
+        <div id="welcomeScreen">
+            <h1>⭐ Catch The Stars ⭐</h1>
+
+            <p>Welcome to the magical star-catching game!</p>
+
+            <p>Move your basket using the LEFT and RIGHT arrow keys.</p>
+
+            <p>Catch golden stars and pink bonus stars!</p>
+
+            <button id="playButton">Let's Play!</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="gameScreen" style="display: none;">
+
+            <h1>⭐ Catch The Stars ⭐</h1>
+
+            <p>Catch as many stars as you can!</p>
+
+            <div class="score-board">
+                <span>Score: <span id="score">0</span></span>
+
+                <span>Time: <span id="timer">30</span>s</span>
+
+                <span>🏆 Best: <span id="highScore">0</span></span>
+            </div>
+
+            <canvas id="gameCanvas" width="600" height="400"></canvas>
+
+            <div class="level-selector">
+                <label for="difficulty">Choose Level:</label>
+
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+
+            <button id="startButton">Start Game</button>
+
+            <p id="message">Ready to play?</p>
+
+        </div>
+        <!-- Game Over Screen -->
+        <div id="gameOverScreen" style="display: none;">
+
+            <h1>🎉 Game Over! 🎉</h1>
+
+            <p>Amazing effort! Here's how you did.</p>
+
+            <h2>Your Score: <span id="finalScore">0</span></h2>
+
+            <h2>🏆 Best Score: <span id="finalHighScore">0</span></h2>
+
+            <button id="replayButton">Play Again</button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
